@@ -233,7 +233,7 @@ public class PlayController2 : MonoBehaviour
     }
     
     //释放技能
-    public void UseSkill(SkillSortEnum skillSort)
+    /*public void UseSkill(SkillSortEnum skillSort)
     {
         switch (skillSort)
         {
@@ -257,5 +257,5 @@ public class PlayController2 : MonoBehaviour
                 break;
            
         }
-    }
+    }*/
 }
