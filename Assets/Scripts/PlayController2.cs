@@ -3,12 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public enum SkillSortEnum
-{
-
-}
-
 public class PlayController2 : MonoBehaviour
 {
     public Vector3 flippedScale = new Vector3(-1,1,1);
@@ -39,17 +33,11 @@ public class PlayController2 : MonoBehaviour
     public Collider2D m_CrouchDisableCollider;
     private bool crouch = false;
 
-    //技能
-    public static PlayController2 Instance;
-    private GameObject _skill1, _skill2, _skill3;
     void Start()
     {
         rigi = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        Instance = this;
-        _skill1 = Resources.Load<GameObject>("fire");
-        _skill2 = Resources.Load<GameObject>("");
-        _skill3 = Resources.Load<GameObject>("");
+        
     }
 
     // Update is called once per frame
@@ -112,7 +100,7 @@ public class PlayController2 : MonoBehaviour
             animator.SetTrigger("jump");
             
         }
-        if( Input.GetButtonDown("Jump") &&!jumpis &&jumpSwitch)
+        if( Input.GetButtonDown("Jump") &&  !jumpis &&jumpSwitch)
         {
             rigi.velocity = new Vector2(rigi.velocity.x,jumpHeight);
            
@@ -231,31 +219,4 @@ public class PlayController2 : MonoBehaviour
             animator.SetBool("crouch", crouch);
         }
     }
-    
-    //释放技能
-    /*public void UseSkill(SkillSortEnum skillSort)
-    {
-        switch (skillSort)
-        {
-            case SkillSortEnum.skill01:
-            {
-                GameObject clone = Instantiate<GameObject>(_skill1);
-                clone.transform.position = transform.position;
-            }
-                break;
-            case SkillSortEnum.skill02:
-            {
-                GameObject clone = Instantiate<GameObject>(_skill2);
-                clone.transform.position = transform.position;
-            }
-                break;
-            case SkillSortEnum.skill03:
-            {
-                GameObject clone = Instantiate<GameObject>(_skill3);
-                clone.transform.position = transform.position;
-            }
-                break;
-           
-        }
-    }*/
-}
+    }

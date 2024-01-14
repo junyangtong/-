@@ -13,7 +13,7 @@ public class ActivateCamOnPlay : MonoBehaviour
     public Transform cam1;
     public Transform cam2;
     public Transform cam3;
-    public Transform playerTransform;
+    private Transform playerTransform;
     private float distance1; 
     private float distance2; 
     private float distance3; 
@@ -22,7 +22,7 @@ public class ActivateCamOnPlay : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {  
-        
+        playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         
             if (vcam3)
             {
@@ -36,7 +36,7 @@ public class ActivateCamOnPlay : MonoBehaviour
             Vector3 cam1Pos = cam1.position;
             Vector3 cam2Pos = cam2.position;
             Vector3 cam3Pos = cam3.position;
-
+            
             Vector3 playerPos = playerTransform.position;
 
             //判断摄像机与角色之间的距离
@@ -44,7 +44,7 @@ public class ActivateCamOnPlay : MonoBehaviour
             distance2 = Vector3.Distance(cam2Pos, playerPos);
             distance3 = Vector3.Distance(cam3Pos, playerPos);
             float min = findMin(distance1,distance2,distance3);
-            Debug.Log("The max value is: " + min);
+            //Debug.Log("The max value is: " + min);
             //Debug.Log("Distance between camera1 and player: " + distance1);
             //Debug.Log("Distance between camera2 and player: " + distance2);
             //Debug.Log("Distance between camera3 and player: " + distance3);

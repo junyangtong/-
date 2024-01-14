@@ -101,18 +101,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -162,12 +150,12 @@ TextureImporter:
       name: Cha_7
       rect:
         serializedVersion: 2
-        x: 602
-        y: 1658
+        x: 597
+        y: 1663
         width: 675
         height: 668
-      alignment: 9
-      pivot: {x: 0.49796024, y: 0.038320392}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -295,7 +283,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cha_1: -1779919432
+      Cha_5: 1413283190
       Cha_12: -187869114
       Cha_9: -1898146334
       Cha_11: -169024718
@@ -307,7 +295,7 @@ TextureImporter:
       Cha_4: 1406417407
       Cha_10: -1978564804
       Cha_6: -1100301853
-      Cha_5: 1413283190
+      Cha_1: -1779919432
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

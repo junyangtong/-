@@ -94,13 +94,13 @@ ScriptedImporter:
   rigSpriteImportData:
   - name: "\u5934\u53D1"
     originalName: 
-    pivot: {x: 0.4862487, y: -1.45}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1
-      y: 1
+      x: 4
+      y: 4
       width: 394
       height: 230
     spriteID: dbca5aefd1ea1ea43b73c95ff4574e17
@@ -809,8 +809,8 @@ ScriptedImporter:
     uvTransform: {x: -106, y: -443}
   - name: "\u53F3\u773C"
     originalName: 
-    pivot: {x: 0.5, y: -10.5}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1125,8 +1125,8 @@ ScriptedImporter:
     uvTransform: {x: 78, y: -287}
   - name: "\u5DE6\u773C"
     originalName: 
-    pivot: {x: 0.5, y: -10.4}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1397,8 +1397,8 @@ ScriptedImporter:
     uvTransform: {x: 24, y: 19}
   - name: "\u5634\u5DF4"
     originalName: 
-    pivot: {x: 0.5, y: -8.7}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1669,8 +1669,8 @@ ScriptedImporter:
     uvTransform: {x: 29, y: 112}
   - name: "\u56FE\u5C42 23"
     originalName: 
-    pivot: {x: 0.49773464, y: -1.1}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2049,8 +2049,8 @@ ScriptedImporter:
     uvTransform: {x: -154, y: -92}
   - name: "\u5DE6\u5927\u81C2"
     originalName: 
-    pivot: {x: 0.5, y: -2.3}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2359,8 +2359,8 @@ ScriptedImporter:
     uvTransform: {x: 142, y: 154}
   - name: "\u5DE6\u5C0F\u81C2"
     originalName: 
-    pivot: {x: 0.5, y: -2.3}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2671,8 +2671,8 @@ ScriptedImporter:
     uvTransform: {x: 241, y: 67}
   - name: "\u5DE6\u624B"
     originalName: 
-    pivot: {x: 0.5, y: -2}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3018,8 +3018,8 @@ ScriptedImporter:
     uvTransform: {x: 269, y: 151}
   - name: "\u53F3\u5927\u81C2"
     originalName: 
-    pivot: {x: 0.5, y: -2.9}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3310,8 +3310,8 @@ ScriptedImporter:
     uvTransform: {x: 119, y: 151}
   - name: "\u53F3\u5C0F\u81C2"
     originalName: 
-    pivot: {x: 0.5, y: -2.9}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3622,13 +3622,13 @@ ScriptedImporter:
     uvTransform: {x: 91, y: 7}
   - name: "\u53F3\u624B"
     originalName: 
-    pivot: {x: 0.5, y: -4.1}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 406
-      y: 207
+      y: 208
       width: 35
       height: 25
     spriteID: 2113429e7dba7764394bb0c0910f0f2e
@@ -3883,8 +3883,8 @@ ScriptedImporter:
     uvTransform: {x: 5, y: -9}
   - name: "\u8EAB\u5B50\u3001"
     originalName: 
-    pivot: {x: 0.49554673, y: -0.3}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -4277,12 +4277,12 @@ ScriptedImporter:
     uvTransform: {x: 62, y: 69}
   - name: "\u5DE6\u5927\u817F"
     originalName: 
-    pivot: {x: 0.5, y: -0.4}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 409
+      x: 406
       y: 55
       width: 33
       height: 47
@@ -4600,8 +4600,8 @@ ScriptedImporter:
     uvTransform: {x: 149, y: -90}
   - name: "\u5DE6\u5C0F\u817F"
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -4826,8 +4826,8 @@ ScriptedImporter:
     uvTransform: {x: 38, y: 307}
   - name: "\u53F3\u5927\u817F"
     originalName: 
-    pivot: {x: 0.5, y: -0.4}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -5160,8 +5160,8 @@ ScriptedImporter:
     uvTransform: {x: 82, y: -142}
   - name: "\u53F3\u5C0F\u817F"
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
