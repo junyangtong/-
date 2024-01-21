@@ -3,6 +3,7 @@ Shader "Fire"
     Properties
     {
         [Header(Texture)]
+        _MainTex           ("MainTex",2D)="blue"{}
         _Mask            ("R:内焰 G:外焰 B:透贴",2D)="blue"{}
         _Noise           ("R:噪声1 G:噪声2",2D)="gray"{}
         _Noise1Params    ("噪声1 X:大小 Y:流速 Z:强度",vector)=(1.0,1.0,1.0,1.0)
@@ -37,6 +38,8 @@ Shader "Fire"
          SAMPLER (sampler_Mask); 
         uniform TEXTURE2D (_Noise);
          SAMPLER(sampler_Noise);
+            uniform TEXTURE2D (_MainTex);
+         SAMPLER(sampler_MainTex);
         
         
 
