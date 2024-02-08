@@ -60,7 +60,7 @@ Material:
     - _WarpInt2: 1
     - _WaterSpeed: 0.077
     m_Colors:
-    - _Color: {r: 0.51174796, g: 0.7860759, b: 0.8679245, a: 1}
+    - _Color: {r: 0.6657882, g: 0.8018868, b: 0.63923997, a: 1}
     - _ColorUp: {r: 1, g: 1, b: 1, a: 1}
     - _RippleData: {r: 1.6, g: 1.17, b: 1, a: 1}
     - _RippleData2: {r: 1, g: 1, b: 1, a: 1}
