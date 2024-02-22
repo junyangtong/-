@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollisionEvents : MonoBehaviour
 {
     public bool CanInteractive = false;
+    public Item currentItem;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,6 +13,10 @@ public class CollisionEvents : MonoBehaviour
         { 
             //靠近可交互物品
             CanInteractive = true;
+            //显示按键提示
+            currentItem = collision.gameObject.GetComponent<Item>();
+            currentItem.ShowToolTip(true);
+
             Debug.Log("靠近可交互物品");
         }
     }
@@ -21,6 +26,9 @@ public class CollisionEvents : MonoBehaviour
         { 
             // 离开可交互物品
             CanInteractive = false;
+            //关闭按键提示
+            Item item = collision.gameObject.GetComponent<Item>();
+            item.ShowToolTip(false);
             Debug.Log("离开可交互物品");
         }
     }

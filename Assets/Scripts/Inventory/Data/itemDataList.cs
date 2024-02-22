@@ -6,6 +6,10 @@ using UnityEngine;
 public class itemDataList : ScriptableObject
 {
     public List<ItemDetails> itemDatailsList;
+    public ItemDetails GetItemDetails(ItemName itemName)
+    {
+        return itemDatailsList.Find(i => i.itemName == itemName);    
+    }
 }
 
 [System.Serializable]
