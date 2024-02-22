@@ -5,9 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ItemDataList", menuName = "Inventory/ItemDataList")]
 public class itemDataList : ScriptableObject
 {
-    
+    public List<ItemDetails> itemDatailsList;
 }
 
+[System.Serializable]
 public class ItemDetails
 {
     public ItemName itemName;
