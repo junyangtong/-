@@ -6,6 +6,7 @@ public class CursorKeyboardManager : MonoBehaviour
 {
     public CollisionEvents collisionEvents;
 
+    
     private void Update() 
     {
         if(collisionEvents.CanInteractive)
