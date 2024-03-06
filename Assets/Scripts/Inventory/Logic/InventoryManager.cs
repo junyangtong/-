@@ -10,24 +10,45 @@ public class InventoryManager : Singleton<InventoryManager>
    public GameObject slotPrefab;
    public GameObject slotGrid;
    public bool isSelected;
+   public bool holdItem;
+   public ItemName currentItem;
    private ItemDetails itemDetails;
    [SerializeField]private List<ItemName> itemList = new List<ItemName>();
    private void OnEnable() 
     {
+         EventHandler.ItemUsedEvent += OnItemUsedEvent;
         EventHandler.ItemSelectedEvent += OnItemSelectedEvent;
     }
     void OnDisable()
     {
+      EventHandler.ItemUsedEvent -= OnItemUsedEvent;
         EventHandler.ItemSelectedEvent -= OnItemSelectedEvent;
     }
 
     private void OnItemSelectedEvent(ItemDetails itemDetails)
     {   
-         ItemName currentItem = itemDetails.itemName;
+         holdItem = true;
+         currentItem = itemDetails.itemName;
          // 高亮显示
          HighLightItem(currentItem);
 
          Debug.Log("当前选择"+currentItem); 
+    }
+    private void OnItemUsedEvent(ItemName itemName)
+    {
+        int children = slotGrid.transform.childCount;
+        for (int i = 0; i < children; i++)
+        {   
+            SlotUI slotUI = slotGrid.transform.GetChild(i).GetComponent<SlotUI>();
+            if(slotUI.currentItem.itemName == itemName)
+            {
+                //InitializeSelectionState();
+                Destroy(slotUI.gameObject);
+                Debug.Log("移除背包中的"+slotUI.currentItem.itemName);
+                itemList.Remove(itemName);
+            }
+        }
+        
     }
    public void AddItem(ItemName itemName)
    {

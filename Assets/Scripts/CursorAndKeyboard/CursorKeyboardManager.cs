@@ -13,7 +13,23 @@ public class CursorKeyboardManager : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.E))
             {   
-                collisionEvents.currentItem.ItemPicked();
+                switch(collisionEvents.currentObj.transform.tag)
+                {
+                    case "Item":
+                        collisionEvents.currentItem.ItemPicked();
+                        break;
+                    case "NPC":
+                        var interactive = collisionEvents.currentObj.gameObject.GetComponent<Interactive>();
+                                if(InventoryManager.Instance.holdItem)
+                                    {
+                                        interactive?.CheckItem(InventoryManager.Instance.currentItem);
+                                        //if(interactive.isDone)
+                                            InventoryManager.Instance.holdItem =false;//如果物品成功使用了 则取消选择状态
+                                    }
+                                else
+                                    interactive?.EmptyClicked();
+                        break;
+                }
             }
         }
     }

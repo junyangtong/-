@@ -9,5 +9,9 @@ public static class EventHandler
     {
         ItemSelectedEvent?.Invoke(itemDetails);
     }
-    
+    public static event Action<ItemName> ItemUsedEvent;
+    public static void CallItemUsedEvent(ItemName itemName)
+    {
+        ItemUsedEvent?.Invoke(itemName);
+    }
 }

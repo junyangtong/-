@@ -6,30 +6,48 @@ public class CollisionEvents : MonoBehaviour
 {
     public bool CanInteractive = false;
     public Item currentItem;
+    public GameObject currentObj;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 7)
         { 
+            Debug.Log("靠近可交互物品");
             //靠近可交互物品
             CanInteractive = true;
-            //显示按键提示
-            currentItem = collision.gameObject.GetComponent<Item>();
-            currentItem.ShowToolTip(true);
-
-            Debug.Log("靠近可交互物品");
+            currentObj = collision.gameObject;
+            switch(currentObj.transform.tag)
+            {
+                case "Item":
+                currentItem = collision.gameObject.GetComponent<Item>();
+                currentItem.ShowToolTip(true);
+                break;
+                case "NPC":
+                Interactive interactive = collision.gameObject.GetComponent<Interactive>();
+                interactive.ShowToolTip(true);
+                break;
+            }
         }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 7)
         { 
+            Debug.Log("离开可交互物品");
             // 离开可交互物品
             CanInteractive = false;
-            //关闭按键提示
-            Item item = collision.gameObject.GetComponent<Item>();
-            item.ShowToolTip(false);
-            Debug.Log("离开可交互物品");
+            currentObj = collision.gameObject;
+            switch(collision.gameObject.transform.tag)
+            {
+                case "Item":
+                currentItem = collision.gameObject.GetComponent<Item>();
+                currentItem.ShowToolTip(false);
+                break;
+                case "NPC":
+                Interactive interactive = collision.gameObject.GetComponent<Interactive>();
+                interactive.ShowToolTip(false);
+                break;
+            }
         }
     }
 }
