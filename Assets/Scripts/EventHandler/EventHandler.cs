@@ -14,4 +14,10 @@ public static class EventHandler
     {
         ItemUsedEvent?.Invoke(itemName);
     }
+    //对话
+    public static event Action<string> ShowDialogueEvent;
+    public static void CallShowDialogueEvent(string dialogue)
+    {
+        ShowDialogueEvent?.Invoke(dialogue);
+    }
 }

@@ -26,6 +26,10 @@ public class CollisionEvents : MonoBehaviour
                 Interactive interactive = collision.gameObject.GetComponent<Interactive>();
                 interactive.ShowToolTip(true);
                 break;
+                case "ItemNoRequire":
+                Interactive interactive1 = collision.gameObject.GetComponent<Interactive>();
+                interactive1.ShowToolTip(true);
+                break;
             }
         }
     }
@@ -47,7 +51,13 @@ public class CollisionEvents : MonoBehaviour
                 Interactive interactive = collision.gameObject.GetComponent<Interactive>();
                 interactive.ShowToolTip(false);
                 break;
+                case "ItemNoRequire":
+                Interactive interactive1 = collision.gameObject.GetComponent<Interactive>();
+                interactive1.ShowToolTip(false);
+                break;
             }
+            // 离开可交互物品时取消对话框
+            EventHandler.CallShowDialogueEvent(string.Empty);
         }
     }
 }

@@ -29,6 +29,10 @@ public class CursorKeyboardManager : MonoBehaviour
                                 else
                                     interactive?.EmptyClicked();
                         break;
+                    case "ItemNoRequire":
+                        var interactive1 = collisionEvents.currentObj.gameObject.GetComponent<Interactive>();
+                        interactive1?.OnClickedActionNoRequire();
+                        break;
                 }
             }
         }
